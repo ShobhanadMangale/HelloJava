@@ -21,15 +21,21 @@ class UserDetails{
      System.out.println("Enter your Pincode : ");
      int pincode=sc.nextInt();
      System.out.println("Your Pincode is : "+ pincode);
-     System.out.println("Enter your mobile number : ");
+     System.out.println("Enter your mobile number(10 digits): ");
      long MNo=sc.nextLong();
-     System.out.println("Your mobile number is : "+MNo);
+     if(MNo==10){
+        System.out.println("Your mobile number is : "+MNo);
+     }
+     else{
+        System.out.println("Mobile number exceeds by 10 digits!!");
+     }
     }
    
 
 }
 public class Main {
     public static void main(String[] args) {
-        
+        UserDetails obj = new UserDetails();
+        obj.login();;
     }
 }
